@@ -16,6 +16,14 @@
 		4B9D95B1233B6EA80049C79A /* AMolangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D95B0233B6EA80049C79A /* AMolangUITests.swift */; };
 		4B9D95C0233B6EE70049C79A /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D95BF233B6EE70049C79A /* Intro.storyboard */; };
 		4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D95C1233B6EF50049C79A /* IntroViewController.swift */; };
+		4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */; };
+		4BF9E67C2341F0EB0002CB89 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9E67B2341F0EB0002CB89 /* Join.storyboard */; };
+		4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */; };
+		4BF9E6812341F1BE0002CB89 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9E6802341F1BE0002CB89 /* Chat.storyboard */; };
+		4BF9E6852341F2AD0002CB89 /* AMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6842341F2AD0002CB89 /* AMView.swift */; };
+		4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6872341F4900002CB89 /* ChatCell.swift */; };
+		4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E68A2341FA9F0002CB89 /* UIView_extension.swift */; };
+		4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E68D23420A050002CB89 /* APINetwork.swift */; };
 		5BEDAC82621DB80CBA258033 /* Pods_AMolang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009770E3885B13B378619F82 /* Pods_AMolang.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +62,14 @@
 		4B9D95B2233B6EA80049C79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9D95BF233B6EE70049C79A /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		4B9D95C1233B6EF50049C79A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		4BF9E67B2341F0EB0002CB89 /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
+		4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4BF9E6802341F1BE0002CB89 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		4BF9E6842341F2AD0002CB89 /* AMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMView.swift; sourceTree = "<group>"; };
+		4BF9E6872341F4900002CB89 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		4BF9E68A2341FA9F0002CB89 /* UIView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_extension.swift; sourceTree = "<group>"; };
+		4BF9E68D23420A050002CB89 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
 		A72117DE51D9A98C143C9C6C /* Pods-AMolang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMolang.debug.xcconfig"; path = "Target Support Files/Pods-AMolang/Pods-AMolang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,8 +124,10 @@
 		4B9D958F233B6EA60049C79A /* AMolang */ = {
 			isa = PBXGroup;
 			children = (
-				4BBF93B7233C6719009D2CC7 /* Main */,
-				4B9D95BE233B6ED40049C79A /* Intro */,
+				4BF9E68C234209CA0002CB89 /* Network */,
+				4BF9E6892341FA670002CB89 /* Extension */,
+				4BF9E6832341F27F0002CB89 /* CustomClass */,
+				4BF9E6822341F2650002CB89 /* View */,
 				4B9D9590233B6EA60049C79A /* AppDelegate.swift */,
 				4B9D9597233B6EA80049C79A /* Assets.xcassets */,
 				4B9D9599233B6EA80049C79A /* LaunchScreen.storyboard */,
@@ -152,6 +170,68 @@
 				4B9D9594233B6EA60049C79A /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4BF9E6782341F0C90002CB89 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E67B2341F0EB0002CB89 /* Join.storyboard */,
+				4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		4BF9E67D2341F1A60002CB89 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E6862341F4700002CB89 /* Cell */,
+				4BF9E6802341F1BE0002CB89 /* Chat.storyboard */,
+				4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		4BF9E6822341F2650002CB89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E67D2341F1A60002CB89 /* Chat */,
+				4BF9E6782341F0C90002CB89 /* Join */,
+				4BBF93B7233C6719009D2CC7 /* Main */,
+				4B9D95BE233B6ED40049C79A /* Intro */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BF9E6832341F27F0002CB89 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E6842341F2AD0002CB89 /* AMView.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		4BF9E6862341F4700002CB89 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E6872341F4900002CB89 /* ChatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4BF9E6892341FA670002CB89 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E68A2341FA9F0002CB89 /* UIView_extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4BF9E68C234209CA0002CB89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E68D23420A050002CB89 /* APINetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		93AB1448E589CD9D4709397A /* Pods */ = {
@@ -277,10 +357,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF9E6812341F1BE0002CB89 /* Chat.storyboard in Resources */,
 				4B9D959B233B6EA80049C79A /* LaunchScreen.storyboard in Resources */,
 				4B9D9598233B6EA80049C79A /* Assets.xcassets in Resources */,
 				4B9D9596233B6EA60049C79A /* Main.storyboard in Resources */,
 				4B9D95C0233B6EE70049C79A /* Intro.storyboard in Resources */,
+				4BF9E67C2341F0EB0002CB89 /* Join.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +440,13 @@
 			files = (
 				4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */,
 				4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */,
+				4BF9E6852341F2AD0002CB89 /* AMView.swift in Sources */,
+				4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */,
+				4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */,
+				4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */,
+				4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */,
 				4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */,
+				4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
