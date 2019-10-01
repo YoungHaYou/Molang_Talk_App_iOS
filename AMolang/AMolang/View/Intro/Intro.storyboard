@@ -26,11 +26,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9d-fB-hET">
-                                <rect key="frame" x="186" y="348" width="46" height="30"/>
+                                <rect key="frame" x="183" y="348" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="채팅화면"/>
                                 <connections>
                                     <action selector="clickTest:" destination="ugD-Gp-3Kn" eventType="touchUpInside" id="NNx-V3-OsD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7b-U7-eqf">
+                                <rect key="frame" x="84" y="348" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="시작하기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-eD-jXn">
+                                <rect key="frame" x="285" y="348" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="메인탭바"/>
+                                <connections>
+                                    <action selector="clickMain:" destination="ugD-Gp-3Kn" eventType="touchUpInside" id="ddA-Z2-RHN"/>
                                 </connections>
                             </button>
                         </subviews>

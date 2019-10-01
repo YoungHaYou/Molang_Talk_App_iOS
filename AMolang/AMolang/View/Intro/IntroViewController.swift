@@ -26,5 +26,16 @@ class IntroViewController: UIViewController {
     }
     
     
+    
+    @IBAction func clickMain(_ sender: Any) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "TabController") as! TabController
+        UIApplication.shared.keyWindow?.rootViewController = vc;
+        
+        
+    }
+    
+    
 
 }
