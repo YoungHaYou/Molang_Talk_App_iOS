@@ -38,9 +38,6 @@ class APINetwork: NSObject {
                     print("JSON: \(JSON)")
                 }
         }
-        
-        
-        
     }
     
     

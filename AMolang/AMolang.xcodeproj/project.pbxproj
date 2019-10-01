@@ -24,6 +24,7 @@
 		4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6872341F4900002CB89 /* ChatCell.swift */; };
 		4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E68A2341FA9F0002CB89 /* UIView_extension.swift */; };
 		4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E68D23420A050002CB89 /* APINetwork.swift */; };
+		4BF9E6912342E30B0002CB89 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6902342E30B0002CB89 /* Util.swift */; };
 		5BEDAC82621DB80CBA258033 /* Pods_AMolang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009770E3885B13B378619F82 /* Pods_AMolang.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		4BF9E6872341F4900002CB89 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		4BF9E68A2341FA9F0002CB89 /* UIView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_extension.swift; sourceTree = "<group>"; };
 		4BF9E68D23420A050002CB89 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
+		4BF9E6902342E30B0002CB89 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A72117DE51D9A98C143C9C6C /* Pods-AMolang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMolang.debug.xcconfig"; path = "Target Support Files/Pods-AMolang/Pods-AMolang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		4B9D958F233B6EA60049C79A /* AMolang */ = {
 			isa = PBXGroup;
 			children = (
+				4BF9E68F2342E2F20002CB89 /* Common */,
 				4BF9E68C234209CA0002CB89 /* Network */,
 				4BF9E6892341FA670002CB89 /* Extension */,
 				4BF9E6832341F27F0002CB89 /* CustomClass */,
@@ -232,6 +235,14 @@
 				4BF9E68D23420A050002CB89 /* APINetwork.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4BF9E68F2342E2F20002CB89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E6902342E30B0002CB89 /* Util.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		93AB1448E589CD9D4709397A /* Pods */ = {
@@ -445,6 +456,7 @@
 				4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */,
 				4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */,
 				4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */,
+				4BF9E6912342E30B0002CB89 /* Util.swift in Sources */,
 				4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */,
 				4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */,
 			);
