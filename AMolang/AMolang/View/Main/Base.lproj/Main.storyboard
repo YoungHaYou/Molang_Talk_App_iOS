@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eGB-hY-L22">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eGB-hY-L22">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat-->
-        <scene sceneID="IDK-3p-IRD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="ghr-38-5De" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xFT-Za-yS3"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQu-V6-6N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-275" y="130"/>
-        </scene>
         <!--Tab Controller-->
         <scene sceneID="glE-oc-ZIk">
             <objects>
@@ -29,12 +17,133 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ghr-38-5De" kind="relationship" relationship="viewControllers" id="k7s-4V-8Me"/>
+                        <segue destination="s9h-kn-Tsd" kind="relationship" relationship="viewControllers" id="31G-2H-CJF"/>
+                        <segue destination="n86-Nn-KdF" kind="relationship" relationship="viewControllers" id="mMP-rK-4SX"/>
+                        <segue destination="Fd9-aW-uD7" kind="relationship" relationship="viewControllers" id="7W9-bu-lf7"/>
+                        <segue destination="b9O-HM-GAi" kind="relationship" relationship="viewControllers" id="ThR-bJ-CLu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glo-6m-xWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-305"/>
+            <point key="canvasLocation" x="-274" y="-388"/>
+        </scene>
+        <!--Match-->
+        <scene sceneID="ShI-Aj-Xcc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Match" id="bLc-GQ-nya" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FoA-WA-y72"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXi-cz-4J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1449" y="745"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="imV-Zs-YDw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="reN-Jx-YXV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jvi-M2-Jpq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVH-dQ-f8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="745"/>
+        </scene>
+        <!--랜덤매칭-->
+        <scene sceneID="KW3-dC-opC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="s9h-kn-Tsd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="랜덤매칭" image="link" catalog="system" id="Rcn-oG-ngx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yu3-Ob-xJ3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bLc-GQ-nya" kind="relationship" relationship="rootViewController" id="lQj-6H-nUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czj-EC-iw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1448" y="356"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="drs-0e-Iv8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="n86-Nn-KdF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="채팅" image="message" catalog="system" id="K1c-Cr-QB2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="77o-JL-L0d">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="reN-Jx-YXV" kind="relationship" relationship="rootViewController" id="75b-3Q-NfM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6b-Va-QBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="356"/>
+        </scene>
+        <!--Point-->
+        <scene sceneID="GQR-Xk-38W">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Point" id="MB3-uE-ahy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8Uf-hB-cKu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzf-We-fRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="755"/>
+        </scene>
+        <!--포인트-->
+        <scene sceneID="KAV-kE-Lx0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Fd9-aW-uD7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="포인트" image="p.circle" catalog="system" id="lSh-Qz-xke"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrf-Kl-xFe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MB3-uE-ahy" kind="relationship" relationship="rootViewController" id="rws-6F-TZ4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfe-kJ-WCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="356"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="XB3-Qc-ZeN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="EPM-6d-nGG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ae2-m4-0qn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sH-S2-DkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="755"/>
+        </scene>
+        <!--더보기-->
+        <scene sceneID="tQ7-Za-sax">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="b9O-HM-GAi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="더보기" image="plus" catalog="system" id="kHs-VX-E4d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1o3-mS-B2Q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EPM-6d-nGG" kind="relationship" relationship="rootViewController" id="HcB-Td-0qg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2T8-DH-Fx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="356"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="link" catalog="system" width="64" height="58"/>
+        <image name="message" catalog="system" width="64" height="58"/>
+        <image name="p.circle" catalog="system" width="64" height="62"/>
+        <image name="plus" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

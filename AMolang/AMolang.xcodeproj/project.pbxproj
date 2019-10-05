@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B67306C2348361600F2CC02 /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B67306B2348361600F2CC02 /* Match.storyboard */; };
+		4B67306E2348362900F2CC02 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67306D2348362900F2CC02 /* MatchViewController.swift */; };
+		4B673073234836BE00F2CC02 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B673072234836BE00F2CC02 /* ChatListViewController.swift */; };
+		4B6730762348389400F2CC02 /* Point.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6730752348389400F2CC02 /* Point.storyboard */; };
+		4B673078234838A900F2CC02 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B673077234838A900F2CC02 /* PointViewController.swift */; };
+		4B67307B23483A9F00F2CC02 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B67307A23483A9F00F2CC02 /* Setting.storyboard */; };
+		4B67307D23483B3100F2CC02 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67307C23483B3100F2CC02 /* SettingViewController.swift */; };
+		4B6730822348537700F2CC02 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730812348537700F2CC02 /* ChatListCell.swift */; };
+		4B6730842348684100F2CC02 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730832348684100F2CC02 /* Step1ViewController.swift */; };
+		4B6730862348684F00F2CC02 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730852348684F00F2CC02 /* Step2ViewController.swift */; };
+		4B6730882348685A00F2CC02 /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730872348685A00F2CC02 /* Step3ViewController.swift */; };
 		4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D9590233B6EA60049C79A /* AppDelegate.swift */; };
 		4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D9592233B6EA60049C79A /* ViewController.swift */; };
 		4B9D9596233B6EA60049C79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D9594233B6EA60049C79A /* Main.storyboard */; };
@@ -49,6 +60,17 @@
 /* Begin PBXFileReference section */
 		009770E3885B13B378619F82 /* Pods_AMolang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMolang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3765FD1579BB7BC06FA1F932 /* Pods-AMolang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMolang.release.xcconfig"; path = "Target Support Files/Pods-AMolang/Pods-AMolang.release.xcconfig"; sourceTree = "<group>"; };
+		4B67306B2348361600F2CC02 /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
+		4B67306D2348362900F2CC02 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		4B673072234836BE00F2CC02 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		4B6730752348389400F2CC02 /* Point.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Point.storyboard; sourceTree = "<group>"; };
+		4B673077234838A900F2CC02 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		4B67307A23483A9F00F2CC02 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		4B67307C23483B3100F2CC02 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4B6730812348537700F2CC02 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatListCell.swift; path = AMolang/View/Main/Setting/ChatListCell.swift; sourceTree = SOURCE_ROOT; };
+		4B6730832348684100F2CC02 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
+		4B6730852348684F00F2CC02 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
+		4B6730872348685A00F2CC02 /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
 		4B9D958D233B6EA60049C79A /* AMolang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMolang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9D9590233B6EA60049C79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B9D9592233B6EA60049C79A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +125,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B67306A234835FD00F2CC02 /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				4B67306B2348361600F2CC02 /* Match.storyboard */,
+				4B67306D2348362900F2CC02 /* MatchViewController.swift */,
+			);
+			path = Matching;
+			sourceTree = "<group>";
+		};
+		4B6730742348387B00F2CC02 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				4B6730752348389400F2CC02 /* Point.storyboard */,
+				4B673077234838A900F2CC02 /* PointViewController.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		4B67307923483A8A00F2CC02 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				4B67307A23483A9F00F2CC02 /* Setting.storyboard */,
+				4B67307C23483B3100F2CC02 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		4B67307E2348531500F2CC02 /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */,
+				4BF9E6862341F4700002CB89 /* ChatCell */,
+			);
+			path = Chatting;
+			sourceTree = "<group>";
+		};
+		4B67307F2348533000F2CC02 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				4B673072234836BE00F2CC02 /* ChatListViewController.swift */,
+				4B6730802348535C00F2CC02 /* ChatListCell */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		4B6730802348535C00F2CC02 /* ChatListCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B6730812348537700F2CC02 /* ChatListCell.swift */,
+			);
+			path = ChatListCell;
+			sourceTree = "<group>";
+		};
 		4B9D9584233B6EA60049C79A = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +249,10 @@
 				4B9D9594233B6EA60049C79A /* Main.storyboard */,
 				4BF9E69223431D4B0002CB89 /* TabController.swift */,
 				4B9D9592233B6EA60049C79A /* ViewController.swift */,
+				4BF9E67D2341F1A60002CB89 /* Chat */,
+				4B67306A234835FD00F2CC02 /* Matching */,
+				4B6730742348387B00F2CC02 /* Point */,
+				4B67307923483A8A00F2CC02 /* Setting */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -183,6 +262,9 @@
 			children = (
 				4BF9E67B2341F0EB0002CB89 /* Join.storyboard */,
 				4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */,
+				4B6730832348684100F2CC02 /* Step1ViewController.swift */,
+				4B6730852348684F00F2CC02 /* Step2ViewController.swift */,
+				4B6730872348685A00F2CC02 /* Step3ViewController.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -191,8 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				4BF9E6802341F1BE0002CB89 /* Chat.storyboard */,
-				4BF9E6862341F4700002CB89 /* Cell */,
-				4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */,
+				4B67307F2348533000F2CC02 /* ChatList */,
+				4B67307E2348531500F2CC02 /* Chatting */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -200,7 +282,6 @@
 		4BF9E6822341F2650002CB89 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4BF9E67D2341F1A60002CB89 /* Chat */,
 				4BF9E6782341F0C90002CB89 /* Join */,
 				4BBF93B7233C6719009D2CC7 /* Main */,
 				4B9D95BE233B6ED40049C79A /* Intro */,
@@ -216,12 +297,12 @@
 			path = CustomClass;
 			sourceTree = "<group>";
 		};
-		4BF9E6862341F4700002CB89 /* Cell */ = {
+		4BF9E6862341F4700002CB89 /* ChatCell */ = {
 			isa = PBXGroup;
 			children = (
 				4BF9E6872341F4900002CB89 /* ChatCell.swift */,
 			);
-			path = Cell;
+			path = ChatCell;
 			sourceTree = "<group>";
 		};
 		4BF9E6892341FA670002CB89 /* Extension */ = {
@@ -373,10 +454,13 @@
 			files = (
 				4BF9E6812341F1BE0002CB89 /* Chat.storyboard in Resources */,
 				4B9D959B233B6EA80049C79A /* LaunchScreen.storyboard in Resources */,
+				4B67306C2348361600F2CC02 /* Match.storyboard in Resources */,
 				4B9D9598233B6EA80049C79A /* Assets.xcassets in Resources */,
 				4B9D9596233B6EA60049C79A /* Main.storyboard in Resources */,
 				4B9D95C0233B6EE70049C79A /* Intro.storyboard in Resources */,
+				4B67307B23483A9F00F2CC02 /* Setting.storyboard in Resources */,
 				4BF9E67C2341F0EB0002CB89 /* Join.storyboard in Resources */,
+				4B6730762348389400F2CC02 /* Point.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,16 +536,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B67306E2348362900F2CC02 /* MatchViewController.swift in Sources */,
 				4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */,
 				4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */,
 				4BF9E6852341F2AD0002CB89 /* AMView.swift in Sources */,
 				4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */,
+				4B6730842348684100F2CC02 /* Step1ViewController.swift in Sources */,
+				4B67307D23483B3100F2CC02 /* SettingViewController.swift in Sources */,
+				4B673078234838A900F2CC02 /* PointViewController.swift in Sources */,
 				4BF9E69323431D4B0002CB89 /* TabController.swift in Sources */,
 				4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */,
+				4B6730822348537700F2CC02 /* ChatListCell.swift in Sources */,
 				4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */,
 				4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */,
+				4B6730862348684F00F2CC02 /* Step2ViewController.swift in Sources */,
+				4B6730882348685A00F2CC02 /* Step3ViewController.swift in Sources */,
 				4BF9E6912342E30B0002CB89 /* Util.swift in Sources */,
 				4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */,
+				4B673073234836BE00F2CC02 /* ChatListViewController.swift in Sources */,
 				4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

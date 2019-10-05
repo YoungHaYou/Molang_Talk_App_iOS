@@ -19,8 +19,8 @@ class IntroViewController: UIViewController {
     
     @IBAction func clickTest(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Chat", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "chat_navi") as! UINavigationController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Join", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "joinNavi") as! UINavigationController
         UIApplication.shared.keyWindow?.rootViewController = vc;
         
     }
@@ -32,7 +32,6 @@ class IntroViewController: UIViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "TabController") as! TabController
         UIApplication.shared.keyWindow?.rootViewController = vc;
-        
         
     }
     
