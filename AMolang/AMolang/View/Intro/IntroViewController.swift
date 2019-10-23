@@ -10,18 +10,55 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
+    
+    let versionCheckModel = VersionCheckModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        self.checkLogin()
+        self.checkVersion()
+        
+    }
+    
+    
+    
+    
+    func makeAPICall()
+    {
+        
+    }
+    
+    //MARK: - 버전 및 업데이트 체크
+    func checkVersion()
+    {
+
+        self.versionCheckModel.requestVersionCheck(completion:{(isSucc , obj) in
+            if isSucc
+            {
+                
+                let flag = Util.diffAppVersion(server_version: obj!.version)
+                
+                //앱 버전이 서버 버전보다 낮음.
+                if flag == .orderedAscending{
+                    
+                }
+                else
+                {
+                    
+                }
+            }
+        })
     }
     
     //MARK: - 로그인 여부 체크
     func checkLogin()
     {
         
-        if Util.loadId() != ""
+        print("555555555")
+        return
+        
+        if Util.loadId() != "" && Util.loadAuth() != ""
         {
             self.goToMain()
         }

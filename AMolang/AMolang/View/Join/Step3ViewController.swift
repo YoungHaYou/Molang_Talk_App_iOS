@@ -37,7 +37,7 @@ class Step3ViewController: UIViewController {
         JoinModel.shared.requestJoinUser(completion: {(isSucc , obj) in
             if isSucc
             {
-                Util.saveId(string: obj!.id)
+                Util.saveId(string: String(obj!.id))
                 Util.saveAuth(string: obj!.authorization)
                 self.goToMain()
             }

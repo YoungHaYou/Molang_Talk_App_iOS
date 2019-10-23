@@ -57,7 +57,7 @@ class JoinModel: NSObject {
 struct JoinUser: Codable
 {
     var authorization:String
-    var id: String
+    var id: NSInteger
     
     enum CodingKeys: String, CodingKey
     {
@@ -67,6 +67,6 @@ struct JoinUser: Codable
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         authorization = (try? values.decode(String.self, forKey: .authorization)) ?? ""
-        id = (try? values.decode(String.self, forKey: .id)) ?? ""
+        id = (try? values.decode(NSInteger.self, forKey: .id)) ?? 0
     }
 }
