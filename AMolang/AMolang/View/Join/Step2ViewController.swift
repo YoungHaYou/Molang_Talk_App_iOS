@@ -20,6 +20,8 @@ class Step2ViewController: UIViewController {
     @IBAction func nextAction(_ sender: Any) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Join", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "Step3ViewController") as! Step3ViewController
+        JoinModel.shared.age = self.tfInput.text ?? ""
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

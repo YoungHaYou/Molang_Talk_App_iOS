@@ -21,10 +21,8 @@ class APINetwork: NSObject {
     var method : HTTPMethod = .get
     var parameters:[String : Any] = [:]
     var encoding:ParameterEncoding = URLEncoding.default
-
     
-    
-    func requestAPI(completion: @escaping (String) -> Void)
+    func requestAPI(completion: @escaping (Bool , String) -> Void)
     {
 
         print("url::::::")
@@ -32,15 +30,10 @@ class APINetwork: NSObject {
         print("param::::::")
         print(self.parameters)
         
-        let parameters = ["udid": UIDevice.current.identifierForVendor!.uuidString,
-                                               "nickName":"유영하2",
-                                               "gender":"M" ,
-                                               "age":"20"]
-
         if self.url == ""
         {
             
-            completion("fail")
+            completion(false , "")
             return
         }
         
@@ -61,29 +54,19 @@ class APINetwork: NSObject {
 
                         let jsonString = String(decoding: response.data!, as: UTF8.self)
 
-
-
-                        completion(jsonString)
+                        completion(true , jsonString)
                     }
                     else
                     {
-                        completion("fail")
+                        completion(false , "")
                     }
                 }
                 else
                 {
-                    completion("fail")
+                    completion(false , "")
                 }
-
-
 
         }
     }
-    
-    
-
-    
-    
-    
     
 }

@@ -18,6 +18,7 @@
 		4B6730842348684100F2CC02 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730832348684100F2CC02 /* Step1ViewController.swift */; };
 		4B6730862348684F00F2CC02 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730852348684F00F2CC02 /* Step2ViewController.swift */; };
 		4B6730882348685A00F2CC02 /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6730872348685A00F2CC02 /* Step3ViewController.swift */; };
+		4B96A15C235ADD6F00A3123E /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96A15B235ADD6F00A3123E /* JoinModel.swift */; };
 		4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D9590233B6EA60049C79A /* AppDelegate.swift */; };
 		4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D9592233B6EA60049C79A /* ViewController.swift */; };
 		4B9D9596233B6EA60049C79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D9594233B6EA60049C79A /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		4B6730832348684100F2CC02 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
 		4B6730852348684F00F2CC02 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		4B6730872348685A00F2CC02 /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
+		4B96A15B235ADD6F00A3123E /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
 		4B9D958D233B6EA60049C79A /* AMolang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMolang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9D9590233B6EA60049C79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B9D9592233B6EA60049C79A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = ChatListCell;
 			sourceTree = "<group>";
 		};
+		4B96A1692360191700A3123E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B96A15B235ADD6F00A3123E /* JoinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4B9D9584233B6EA60049C79A = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 				4BF9E68C234209CA0002CB89 /* Network */,
 				4BF9E6892341FA670002CB89 /* Extension */,
 				4BF9E6832341F27F0002CB89 /* CustomClass */,
+				4B96A1692360191700A3123E /* Model */,
 				4BF9E6822341F2650002CB89 /* View */,
 				4B9D9590233B6EA60049C79A /* AppDelegate.swift */,
 				4B9D9597233B6EA80049C79A /* Assets.xcassets */,
@@ -547,6 +558,7 @@
 				4BF9E69323431D4B0002CB89 /* TabController.swift in Sources */,
 				4BF9E6882341F4900002CB89 /* ChatCell.swift in Sources */,
 				4B6730822348537700F2CC02 /* ChatListCell.swift in Sources */,
+				4B96A15C235ADD6F00A3123E /* JoinModel.swift in Sources */,
 				4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */,
 				4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */,
 				4B6730862348684F00F2CC02 /* Step2ViewController.swift in Sources */,
