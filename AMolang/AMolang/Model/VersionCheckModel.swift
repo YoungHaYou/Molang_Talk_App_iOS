@@ -31,7 +31,6 @@ class VersionCheckModel: NSObject {
                     print(error.localizedDescription)
                 }
             }
-            
             completion(false,nil)
             
         })

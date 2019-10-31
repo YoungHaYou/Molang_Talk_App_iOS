@@ -31,6 +31,8 @@
 		4B9D95B1233B6EA80049C79A /* AMolangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D95B0233B6EA80049C79A /* AMolangUITests.swift */; };
 		4B9D95C0233B6EE70049C79A /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D95BF233B6EE70049C79A /* Intro.storyboard */; };
 		4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D95C1233B6EF50049C79A /* IntroViewController.swift */; };
+		4BA35F11236A9AF600F1F957 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F0E236A9AF600F1F957 /* RealmManager.swift */; };
+		4BA35F12236A9AF600F1F957 /* DLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F10236A9AF600F1F957 /* DLFileManager.swift */; };
 		4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */; };
 		4BF9E67C2341F0EB0002CB89 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9E67B2341F0EB0002CB89 /* Join.storyboard */; };
 		4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */; };
@@ -94,6 +96,8 @@
 		4B9D95B2233B6EA80049C79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9D95BF233B6EE70049C79A /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		4B9D95C1233B6EF50049C79A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		4BA35F0E236A9AF600F1F957 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		4BA35F10236A9AF600F1F957 /* DLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFileManager.swift; sourceTree = "<group>"; };
 		4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		4BF9E67B2341F0EB0002CB89 /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 		4B9D958F233B6EA60049C79A /* AMolang */ = {
 			isa = PBXGroup;
 			children = (
+				4BA35F0F236A9AF600F1F957 /* FileManager */,
+				4BA35F0D236A9AF600F1F957 /* Realm */,
 				4BF9E68F2342E2F20002CB89 /* Common */,
 				4BF9E68C234209CA0002CB89 /* Network */,
 				4BF9E6892341FA670002CB89 /* Extension */,
@@ -261,14 +267,30 @@
 			path = Intro;
 			sourceTree = "<group>";
 		};
+		4BA35F0D236A9AF600F1F957 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4BA35F0E236A9AF600F1F957 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		4BA35F0F236A9AF600F1F957 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				4BA35F10236A9AF600F1F957 /* DLFileManager.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		4BBF93B7233C6719009D2CC7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				4B9D9594233B6EA60049C79A /* Main.storyboard */,
 				4BF9E69223431D4B0002CB89 /* TabController.swift */,
 				4B9D9592233B6EA60049C79A /* ViewController.swift */,
-				4BF9E67D2341F1A60002CB89 /* Chat */,
 				4B67306A234835FD00F2CC02 /* Matching */,
+				4BF9E67D2341F1A60002CB89 /* Chat */,
 				4B6730742348387B00F2CC02 /* Point */,
 				4B67307923483A8A00F2CC02 /* Setting */,
 			);
@@ -559,6 +581,7 @@
 				4B96A16F2360482300A3123E /* ServerUrl.swift in Sources */,
 				4B67306E2348362900F2CC02 /* MatchViewController.swift in Sources */,
 				4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */,
+				4BA35F12236A9AF600F1F957 /* DLFileManager.swift in Sources */,
 				4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */,
 				4BF9E6852341F2AD0002CB89 /* AMView.swift in Sources */,
 				4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */,
@@ -573,6 +596,7 @@
 				4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */,
 				4BF9E68B2341FA9F0002CB89 /* UIView_extension.swift in Sources */,
 				4B6730862348684F00F2CC02 /* Step2ViewController.swift in Sources */,
+				4BA35F11236A9AF600F1F957 /* RealmManager.swift in Sources */,
 				4B6730882348685A00F2CC02 /* Step3ViewController.swift in Sources */,
 				4B96A16B23602E7500A3123E /* VersionCheckModel.swift in Sources */,
 				4BF9E6912342E30B0002CB89 /* Util.swift in Sources */,
@@ -761,7 +785,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = u0ha.AMolang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -781,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = u0ha.AMolang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

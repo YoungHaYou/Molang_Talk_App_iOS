@@ -26,13 +26,13 @@ class APINetwork: NSObject {
     {
 
         print("url::::::")
+        print(SERVER_API_DOMAIN)
         print(self.url)
         print("param::::::")
         print(self.parameters)
         
         if self.url == ""
         {
-            
             completion(false , "")
             return
         }
@@ -63,6 +63,7 @@ class APINetwork: NSObject {
                 }
                 else
                 {
+                    print("Error Code :\(response.response?.statusCode)")
                     completion(false , "")
                 }
 
