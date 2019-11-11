@@ -59,7 +59,7 @@ class DLFileManager: NSObject , FileManagerDelegate {
         let image = UIImage.init(named: "jpgtest.jpg")
         let imgData = image!.jpegData(compressionQuality: 1.0)!
 //        let imgData = image!.pngData()!
-        let server_url = SERVER_API_DOMAIN + URL_FILE_UPLOAD
+        let server_url = SERVER_API_DOMAIN + "URL_FILE_UPLOAD"
         
         let headers: HTTPHeaders = [
             /* "Authorization": "your_access_token",  in case you need authorization header */
@@ -134,7 +134,7 @@ class DLFileManager: NSObject , FileManagerDelegate {
     
     func newFileUpload(){
         
-        let server_url = SERVER_API_DOMAIN + URL_FILE_UPLOAD
+        let server_url = SERVER_API_DOMAIN + "URL_FILE_UPLOAD"
 
         
         
@@ -145,7 +145,7 @@ class DLFileManager: NSObject , FileManagerDelegate {
     {
         let image = UIImage.init(named: "jpgtest.jpg")
         let imgData = image!.jpegData(compressionQuality: 1.0)!
-        let server_url = SERVER_API_DOMAIN + URL_FILE_UPLOAD
+        let server_url = SERVER_API_DOMAIN + "URL_FILE_UPLOAD"
 
         let filename = "jpgtest.jpg"
 

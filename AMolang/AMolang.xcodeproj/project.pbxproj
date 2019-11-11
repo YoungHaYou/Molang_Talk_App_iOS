@@ -33,6 +33,9 @@
 		4B9D95C2233B6EF50049C79A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D95C1233B6EF50049C79A /* IntroViewController.swift */; };
 		4BA35F11236A9AF600F1F957 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F0E236A9AF600F1F957 /* RealmManager.swift */; };
 		4BA35F12236A9AF600F1F957 /* DLFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F10236A9AF600F1F957 /* DLFileManager.swift */; };
+		4BA35F1E2375416A00F1F957 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F1D2375416A00F1F957 /* UsersModel.swift */; };
+		4BA35F202377FB0A00F1F957 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F1F2377FB0A00F1F957 /* ErrorModel.swift */; };
+		4BA35F222377FC4D00F1F957 /* MatchingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA35F212377FC4D00F1F957 /* MatchingModel.swift */; };
 		4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */; };
 		4BF9E67C2341F0EB0002CB89 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9E67B2341F0EB0002CB89 /* Join.storyboard */; };
 		4BF9E67F2341F1B50002CB89 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */; };
@@ -98,6 +101,9 @@
 		4B9D95C1233B6EF50049C79A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		4BA35F0E236A9AF600F1F957 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4BA35F10236A9AF600F1F957 /* DLFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFileManager.swift; sourceTree = "<group>"; };
+		4BA35F1D2375416A00F1F957 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		4BA35F1F2377FB0A00F1F957 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		4BA35F212377FC4D00F1F957 /* MatchingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingModel.swift; sourceTree = "<group>"; };
 		4BF9E6792341F0DC0002CB89 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		4BF9E67B2341F0EB0002CB89 /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		4BF9E67E2341F1B40002CB89 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,9 @@
 			children = (
 				4B96A15B235ADD6F00A3123E /* JoinModel.swift */,
 				4B96A16A23602E7500A3123E /* VersionCheckModel.swift */,
+				4BA35F1D2375416A00F1F957 /* UsersModel.swift */,
+				4BA35F1F2377FB0A00F1F957 /* ErrorModel.swift */,
+				4BA35F212377FC4D00F1F957 /* MatchingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +593,7 @@
 				4BA35F12236A9AF600F1F957 /* DLFileManager.swift in Sources */,
 				4B9D9593233B6EA60049C79A /* ViewController.swift in Sources */,
 				4BF9E6852341F2AD0002CB89 /* AMView.swift in Sources */,
+				4BA35F202377FB0A00F1F957 /* ErrorModel.swift in Sources */,
 				4BF9E67A2341F0DC0002CB89 /* JoinViewController.swift in Sources */,
 				4B6730842348684100F2CC02 /* Step1ViewController.swift in Sources */,
 				4B67307D23483B3100F2CC02 /* SettingViewController.swift in Sources */,
@@ -600,8 +610,10 @@
 				4B6730882348685A00F2CC02 /* Step3ViewController.swift in Sources */,
 				4B96A16B23602E7500A3123E /* VersionCheckModel.swift in Sources */,
 				4BF9E6912342E30B0002CB89 /* Util.swift in Sources */,
+				4BA35F1E2375416A00F1F957 /* UsersModel.swift in Sources */,
 				4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */,
 				4B673073234836BE00F2CC02 /* ChatListViewController.swift in Sources */,
+				4BA35F222377FC4D00F1F957 /* MatchingModel.swift in Sources */,
 				4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

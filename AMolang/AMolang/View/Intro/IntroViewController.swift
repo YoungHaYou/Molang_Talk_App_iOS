@@ -8,25 +8,47 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController : UIViewController {
 
     
     let versionCheckModel = VersionCheckModel()
     
     
+    enum stepNum : Int{
+        case defult_value = 0
+        case check_step1 = 1
+        case check_step2 = 2
+    }
+    
+    
+    var introStep: stepNum = .defult_value{
+        
+        didSet {
+
+            if introStep == .check_step1
+            {
+                print("in check Version")
+                self.checkVersion()
+            }
+            else if introStep == .check_step2
+            {
+                print("in check Login")
+                self.checkLogin()
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.checkVersion()
-    }
-    
-    
-    
-    
-    func makeAPICall()
-    {
+        
+        self.introStep = .check_step1
         
     }
+    
+    
     
     //MARK: - 버전 및 업데이트 체크
     func checkVersion()
@@ -36,7 +58,6 @@ class IntroViewController: UIViewController {
 
             if isSucc
             {
-
                 let flag = Util.diffAppVersion(server_version: obj!.version)
                 
                 //앱 버전이 서버 버전보다 낮음.
@@ -46,7 +67,7 @@ class IntroViewController: UIViewController {
                 else
                 {
                     //다음 스탭 이동
-                    self.checkLogin()
+                    self.introStep = .check_step2
                 }
             }
             
@@ -55,11 +76,19 @@ class IntroViewController: UIViewController {
 
     }
     
+    
+    //MARK: - 유져 정보 가져오기
+    func loadUserInfo()
+    {
+        let model = UsersModel.shared.requestUserInfo(completion: { _,_  in
+            
+        })
+    }
+    
+    
     //MARK: - 로그인 여부 체크
     func checkLogin()
     {
-
-        
         if Util.loadId() != "" && Util.loadAuth() != ""
         {
             self.goToMain()

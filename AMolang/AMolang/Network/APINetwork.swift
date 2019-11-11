@@ -21,6 +21,7 @@ class APINetwork: NSObject {
     var method : HTTPMethod = .get
     var parameters:[String : Any] = [:]
     var encoding:ParameterEncoding = URLEncoding.default
+    var header:[String:String] = ["Content-Type":"x-www-form urlencoded"]
     
     func requestAPI(completion: @escaping (Bool , String) -> Void)
     {
@@ -38,7 +39,7 @@ class APINetwork: NSObject {
         }
         
 
-        Alamofire.request(SERVER_API_DOMAIN + self.url , method:self.method , parameters: self.parameters , encoding: self.encoding , headers: [:])
+        Alamofire.request(SERVER_API_DOMAIN + self.url , method:self.method , parameters: self.parameters , encoding: self.encoding , headers: header)
             .responseJSON { response in
                 print(response.request)  // original URL request
 //                print(response.response) // URL response
