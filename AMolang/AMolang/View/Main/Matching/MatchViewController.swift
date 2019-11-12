@@ -17,18 +17,31 @@ class MatchViewController: UIViewController {
         super.viewDidLoad()
 
         
+        MatchingModel.shared.requestMatchingGet(completion: {(isSucc) in
+            
+            if isSucc
+            {
+                
+            }
+            else
+            {
+                
+            }
+        })
+        
+        
     }
     
     
     @IBAction func clickEveryone(_ sender: Any) {
         MatchingModel.shared.requestMatchingPost(type: "EVERYONE", completion: {(isSucc) in
                 
-            })
+        })
     }
     
     
     @IBAction func clickOther(_ sender: Any) {
-        MatchingModel.shared.requestMatchingPost(type: "DIFFERENT_GENDER", completion: {(isSucc) in
+        MatchingModel.shared.requestMatchingDelete(completion: {(isSucc) in
             
         })
     }

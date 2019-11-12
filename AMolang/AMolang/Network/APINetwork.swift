@@ -21,7 +21,11 @@ class APINetwork: NSObject {
     var method : HTTPMethod = .get
     var parameters:[String : Any] = [:]
     var encoding:ParameterEncoding = URLEncoding.default
-    var header:[String:String] = ["Content-Type":"x-www-form urlencoded"]
+    var header:[String:String] = [
+                                    "Content-Type":"application/x-www-form-urlencoded",
+                                    "accept":"application/json",
+                                    "Authorization":Util.loadAuth()
+                                    ]
     
     func requestAPI(completion: @escaping (Bool , String) -> Void)
     {
@@ -31,22 +35,35 @@ class APINetwork: NSObject {
         print(self.url)
         print("param::::::")
         print(self.parameters)
+        print("header::::::")
+        print(self.header)
+
         
         if self.url == ""
         {
             completion(false , "")
             return
         }
-        
 
-        Alamofire.request(SERVER_API_DOMAIN + self.url , method:self.method , parameters: self.parameters , encoding: self.encoding , headers: header)
+
+        
+        
+        Alamofire.request(SERVER_API_DOMAIN + self.url , method:self.method , parameters: self.parameters , encoding: self.encoding , headers: self.header)
             .responseJSON { response in
-                print(response.request)  // original URL request
-//                print(response.response) // URL response
-//                print(response.data)     // server data
+                print("start")
+                print(response.request?.allHTTPHeaderFields)  // original URL request
+//                print(response.response.debugDescription) // URL response
+//                print(response.data?.base64EncodedString())     // server data
 //                print(response.result)   // result of response serialization
 
-
+                if self.method == .post
+                {print("POST")}
+                else if self.method == .get
+                {print("GET")}
+                else if self.method == .put
+                {print("PUT")}
+                else if self.method == .delete
+                {print("DELETE")}
 
                 if response.response?.statusCode == 200
                 {
