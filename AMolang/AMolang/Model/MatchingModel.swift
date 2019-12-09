@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 //MARK: ------------------- ** IsMatching 모델---
 struct IsMatching: Codable
@@ -43,7 +43,7 @@ class MatchingModel: NSObject {
                           "Authorization": Util.loadAuth(),
                           "type":type
                         ]
-        
+        api.encoding = URLEncoding.httpBody
         api.requestAPI(completion: { (isSucc , strData) in
             
             if isSucc
@@ -56,11 +56,12 @@ class MatchingModel: NSObject {
             }
             
         })
+        
     }
+
     
     //MARK: ------------------- ** 매칭 조회(폴링용) ---
-    
-    func requestMatchingGet(type:String ,completion: @escaping (Bool) -> Void)
+    func requestMatchingGet(completion: @escaping (Bool) -> Void)
     {
         let id_value = Util.loadId()
         
@@ -75,7 +76,7 @@ class MatchingModel: NSObject {
         api.method = .get
         api.parameters = ["userId": id_value ,
                           "Authorization": Util.loadAuth()
-                        ]
+        ]
         
         api.requestAPI(completion: { (isSucc , strData) in
             
@@ -110,7 +111,7 @@ class MatchingModel: NSObject {
     
     
     //MARK: ------------------- ** 매칭 취소 ---
-    func requestMatchingDelete(type:String ,completion: @escaping (Bool) -> Void)
+    func requestMatchingDelete(completion: @escaping (Bool) -> Void)
     {
         let id_value = Util.loadId()
         
@@ -122,10 +123,13 @@ class MatchingModel: NSObject {
         
         let api = APINetwork()
         api.url = "/matching"
-        api.method = .post
+        api.method = .delete
         api.parameters = ["userId": id_value ,
                           "Authorization": Util.loadAuth()
                         ]
+        api.encoding = URLEncoding.httpBody
+            
+            
         
         api.requestAPI(completion: { (isSucc , strData) in
             

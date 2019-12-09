@@ -12,41 +12,31 @@ class MatchViewController: UIViewController {
 
     @IBOutlet weak var lbStatus: UILabel!
     
+    var isMaching = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        MatchingModel.shared.requestMatchingGet(completion: {(isSucc) in
-            
-            if isSucc
-            {
-                
-            }
-            else
-            {
-                
-            }
-        })
-        
-        
+
     }
     
     
     @IBAction func clickEveryone(_ sender: Any) {
-        MatchingModel.shared.requestMatchingPost(type: "EVERYONE", completion: {(isSucc) in
-                
-        })
+        MatchingModel.shared.requestMatchingPost(type: "EVERYONE", completion: {_ in })
     }
     
     
     @IBAction func clickOther(_ sender: Any) {
-        MatchingModel.shared.requestMatchingDelete(completion: {(isSucc) in
-            
-        })
+        MatchingModel.shared.requestMatchingDelete(completion: {_ in})
     }
     
     
+    func requestMachingStatus(){
+        MatchingModel.shared.requestMatchingGet(completion: {(status) in
+            self.isMaching = status
+        })
+    }
     
 
 }

@@ -33,13 +33,51 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillShow:), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillHide:), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(note:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    
     }
     
+    
+    
+    @objc func keyboardWillShow(note: NSNotification) {
+//        if let keyboardSize = (note.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+//            if keyboardSize.height == 0.0 || keyboardShown == true {
+//                return
+//            }
+//
+//            UIView.animate(withDuration: 0.33, animations: { () -> Void in
+//                if originY == nil { originY = label.frame.origin.y }
+//                label.frame.origin.y = originY - keyboardSize.height
+//            }, completion: {
+//                keyboardShown = true
+//            })
+//        }
+    }
+
+    @objc func keyboardWillHide(note: NSNotification) {
+//        if let keyboardSize = (note.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//          if keyboardShown == false {
+//              return
+//          }
+//
+//          UIView.animate(withDuration: 0.33, animations: { () -> Void in
+//              guard let originY = originY else { return }
+//              label.frame.origin.y = originY
+//          }, completion: {
+//                keyboardShown = false
+//          })
+//        }
+    }
     
 
 }

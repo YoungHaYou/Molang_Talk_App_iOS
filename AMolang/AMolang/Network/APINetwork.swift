@@ -24,6 +24,7 @@ class APINetwork: NSObject {
     var header:[String:String] = [
                                     "Content-Type":"application/x-www-form-urlencoded",
                                     "accept":"application/json",
+//                                    "Authorization":Util.loadAuth()
                                     "Authorization":Util.loadAuth()
                                     ]
     
@@ -38,16 +39,12 @@ class APINetwork: NSObject {
         print("header::::::")
         print(self.header)
 
-        
         if self.url == ""
         {
             completion(false , "")
             return
         }
 
-
-        
-        
         Alamofire.request(SERVER_API_DOMAIN + self.url , method:self.method , parameters: self.parameters , encoding: self.encoding , headers: self.header)
             .responseJSON { response in
                 print("start")
@@ -81,8 +78,10 @@ class APINetwork: NSObject {
                 }
                 else
                 {
+                    let jsonString = String(decoding: response.data!, as: UTF8.self)
                     print("Error Code :\(response.response?.statusCode)")
-                    completion(false , "")
+                    print("Error Code :\(jsonString)")
+                    completion(false , jsonString)
                 }
 
         }

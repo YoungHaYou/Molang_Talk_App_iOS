@@ -15,6 +15,17 @@ import UIKit
 class Util: NSObject {
     
     
+    class func showAlert(string:String)
+    {
+        let alert = UIAlertController(title: "알림", message: string, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+        
+        
+        let root = UIApplication.shared.keyWindow?.rootViewController
+        root!.present(alert, animated: true, completion: nil)
+    }
+    
+    
     class func diffAppVersion(server_version:String) -> ComparisonResult
     {
         

@@ -7,5 +7,6 @@
 //
 
 import UIKit
-let SERVER_API_DOMAIN = ""
+//let SERVER_API_DOMAIN = ""
+let SERVER_API_DOMAIN = "https://talk.amolang.shop/v1"
 

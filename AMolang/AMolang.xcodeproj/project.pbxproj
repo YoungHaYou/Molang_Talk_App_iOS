@@ -46,6 +46,7 @@
 		4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E68D23420A050002CB89 /* APINetwork.swift */; };
 		4BF9E6912342E30B0002CB89 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E6902342E30B0002CB89 /* Util.swift */; };
 		4BF9E69323431D4B0002CB89 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9E69223431D4B0002CB89 /* TabController.swift */; };
+		4BFE319F2382A9000060E9DF /* AMResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE319E2382A9000060E9DF /* AMResult.swift */; };
 		5BEDAC82621DB80CBA258033 /* Pods_AMolang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009770E3885B13B378619F82 /* Pods_AMolang.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		4BF9E68D23420A050002CB89 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
 		4BF9E6902342E30B0002CB89 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4BF9E69223431D4B0002CB89 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		4BFE319E2382A9000060E9DF /* AMResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMResult.swift; sourceTree = "<group>"; };
 		A72117DE51D9A98C143C9C6C /* Pods-AMolang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMolang.debug.xcconfig"; path = "Target Support Files/Pods-AMolang/Pods-AMolang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				4BF9E6842341F2AD0002CB89 /* AMView.swift */,
+				4BFE319E2382A9000060E9DF /* AMResult.swift */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				4BA35F1E2375416A00F1F957 /* UsersModel.swift in Sources */,
 				4B9D9591233B6EA60049C79A /* AppDelegate.swift in Sources */,
 				4B673073234836BE00F2CC02 /* ChatListViewController.swift in Sources */,
+				4BFE319F2382A9000060E9DF /* AMResult.swift in Sources */,
 				4BA35F222377FC4D00F1F957 /* MatchingModel.swift in Sources */,
 				4BF9E68E23420A050002CB89 /* APINetwork.swift in Sources */,
 			);
