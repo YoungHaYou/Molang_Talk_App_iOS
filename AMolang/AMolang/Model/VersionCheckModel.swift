@@ -11,29 +11,34 @@ import UIKit
 class VersionCheckModel: NSObject {
 
     
-    func requestVersionCheck(completion: @escaping (Bool , Ams?) -> Void)
+    func requestVersionCheck(completion: @escaping (APIResult<Ams>) -> Void)
     {
         
         let api = APINetwork()
         api.url = "/ams/IOS"
         api.method = .get
         api.parameters = [:]
+
         
-        api.requestAPI(completion: { (isSucc , strData) in
-            
-            if isSucc
-            {
-                do
-                {
-                    let obj = try JSONDecoder().decode(Ams.self, from: Data(strData.utf8))
-                    completion(true , obj)
-                } catch {
-                    print(error.localizedDescription)
-                }
+        api.requestAPI(completion:{(result) in
+            switch result {
+                case .success(let strData):
+                    print(strData)
+                    do
+                    {
+                        let obj = try JSONDecoder().decode(Ams.self, from: Data(strData.utf8))
+                        return completion(.success(obj))
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+
+                case .failure(let error):
+                    return completion(.failure(error))
             }
-            completion(false,nil)
-            
         })
+        
+        
+        
     }
     
 }

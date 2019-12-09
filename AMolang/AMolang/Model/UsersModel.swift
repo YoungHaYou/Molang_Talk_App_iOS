@@ -24,16 +24,9 @@ class UsersModel: NSObject {
     
     
     
-    func requestUserInfo(completion: @escaping (Bool , UserInfo?) -> Void)
+    func requestUserInfo(completion: @escaping (APIResult<UserInfo>) -> Void)
     {
         let id_value = Util.loadId()
-        
-        if id_value == ""
-        {
-            completion(false,nil)
-            return
-        }
-        
         
         let api = APINetwork()
         api.url = "/users/" + id_value
@@ -42,23 +35,25 @@ class UsersModel: NSObject {
                           "Authorization": Util.loadAuth()
                         ]
         
-        api.requestAPI(completion: { (isSucc , strData) in
-            
-            if isSucc
-            {
-                do
-                {
-                    let obj = try JSONDecoder().decode(UserInfo.self, from: Data(strData.utf8))
-                    self.userInfo = obj
-                    completion(true , obj)
-                } catch {
-                    print(error.localizedDescription)
-                }
+      
+        api.requestAPI(completion:{(result) in
+            switch result {
+                case .success(let strData):
+                    print(strData)
+                    do
+                    {
+                        let obj = try JSONDecoder().decode(UserInfo.self, from: Data(strData.utf8))
+                        return completion(.success(obj))
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+
+                case .failure(let error):
+                    return completion(.failure(error))
             }
-            
-            completion(false,nil)
-            
         })
+        
+        
     }
     
 }

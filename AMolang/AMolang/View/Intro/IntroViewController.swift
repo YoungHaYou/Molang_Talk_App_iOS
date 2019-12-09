@@ -54,11 +54,11 @@ class IntroViewController : UIViewController {
     func checkVersion()
     {
         
-        self.versionCheckModel.requestVersionCheck(completion:{(isSucc , obj) in
-
-            if isSucc
-            {
-                let flag = Util.diffAppVersion(server_version: obj!.version)
+        self.versionCheckModel.requestVersionCheck { (result) in
+            switch result {
+            case .success(let model):
+                
+                let flag = Util.diffAppVersion(server_version: model.version)
                 
                 //앱 버전이 서버 버전보다 낮음.
                 if flag == .orderedAscending{
@@ -69,10 +69,13 @@ class IntroViewController : UIViewController {
                     //다음 스탭 이동
                     self.introStep = .check_step2
                 }
+                
+            case .failure(let error):
+                print(error)
+
             }
-            
-            
-        })
+        }
+        
 
     }
     

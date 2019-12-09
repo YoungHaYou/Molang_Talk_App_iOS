@@ -32,10 +32,19 @@ class MatchViewController: UIViewController {
     }
     
     
-    func requestMachingStatus(){
-        MatchingModel.shared.requestMatchingGet(completion: {(status) in
-            self.isMaching = status
-        })
+    func requestMachingStatus()
+    {
+        
+        MatchingModel.shared.requestMatchingGet { (isOn , result) in
+            switch result {
+            case .success(let model):
+                self.isMaching = isOn
+            case .failure(let error):
+                print(error)
+
+            }
+        }
+        
     }
     
 

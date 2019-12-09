@@ -33,20 +33,19 @@ class Step3ViewController: UIViewController {
         
         
         JoinModel.shared.gender = self.btMan.isSelected ? "M":"F"
-        
-        JoinModel.shared.requestJoinUser(completion: {(isSucc , obj) in
-            if isSucc
-            {
-                Util.saveId(string: String(obj!.id))
-                Util.saveAuth(string: obj!.authorization)
-                self.goToMain()
-            }
-            else
-            {
+        JoinModel.shared.requestJoinUser { (result) in
+            switch result {
+            case .success(let model):
                 
-            }
+                Util.saveId(string: String(model.id))
+                Util.saveAuth(string: model.authorization)
+                self.goToMain()
+                
+            case .failure(let error):
+                print(error)
 
-        })
+            }
+        }
         
     }
     

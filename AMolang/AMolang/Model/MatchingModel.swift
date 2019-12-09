@@ -61,15 +61,10 @@ class MatchingModel: NSObject {
 
     
     //MARK: ------------------- ** 매칭 조회(폴링용) ---
-    func requestMatchingGet(completion: @escaping (Bool) -> Void)
+    func requestMatchingGet(completion: @escaping (Bool , APIResult<IsMatching>) -> Void)
     {
         let id_value = Util.loadId()
-        
-        if id_value == ""
-        {
-            completion(false)
-            return
-        }
+
         
         let api = APINetwork()
         api.url = "/matching"
@@ -78,35 +73,35 @@ class MatchingModel: NSObject {
                           "Authorization": Util.loadAuth()
         ]
         
-        api.requestAPI(completion: { (isSucc , strData) in
-            
-            if isSucc
-            {
-                do
-                {
-                    let obj = try JSONDecoder().decode(IsMatching.self, from: Data(strData.utf8))
-                    
-                    if obj.isMatching
+        
+        
+        
+        api.requestAPI(completion:{(result) in
+            switch result {
+                case .success(let strData):
+                    print(strData)
+                    do
                     {
-                        completion(true)
+                        let obj = try JSONDecoder().decode(IsMatching.self, from: Data(strData.utf8))
+                        if obj.isMatching
+                        {
+                            return completion(true , .success(obj))
+                        }
+                        else
+                        {
+                            return completion(false , .success(obj))
+                        }
+                        
+                        
+                    } catch {
+                        print(error.localizedDescription)
                     }
-                    else
-                    {
-                        completion(false)
-                    }
-                    
-                    
-                } catch {
-                    print(error.localizedDescription)
-                }
-                
+
+                case .failure(let error):
+                    return completion(true , .failure(error))
             }
-            else
-            {
-                completion(false)
-            }
-            
         })
+        
     }
     
     

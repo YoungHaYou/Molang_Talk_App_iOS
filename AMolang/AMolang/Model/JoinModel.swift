@@ -20,9 +20,40 @@ class JoinModel: NSObject {
         return instance
     }()
     
+//    func fetchModel(completion: @escaping (APIResult<JoinUser>) -> Void) {
+//
+//        let api = APINetwork()
+//        api.url = "/users"
+//        api.method = .post
+//        api.parameters = ["udid": UIDevice.current.identifierForVendor!.uuidString,
+//                          "nickName":self.nickName,
+//                            "gender":self.gender ,
+//                            "age":self.age]
+//
+//        api.requestAPI(completion: { (isSucc , strData) in
+//
+//            if isSucc
+//            {
+//                do
+//                {
+//                    let obj = try JSONDecoder().decode(JoinUser.self, from: Data(strData.utf8))
+//                    return completion(.success(obj))
+//                } catch {
+//                    print(error.localizedDescription)
+//
+//                    let e = ErrorModel()
+//                    return completion(.failure(e))
+//                }
+//
+//            }
+//
+//
+//            return completion(.failure(<#T#>))
+//
+//        })
+//    }
     
-    
-    func requestJoinUser(completion: @escaping (Bool , JoinUser?) -> Void)
+    func requestJoinUser(completion: @escaping (APIResult<JoinUser>) -> Void)
     {
         
         let api = APINetwork()
@@ -33,22 +64,24 @@ class JoinModel: NSObject {
                             "gender":self.gender ,
                             "age":self.age]
         
-        api.requestAPI(completion: { (isSucc , strData) in
-            
-            if isSucc
-            {
-                do
-                {
-                    let obj = try JSONDecoder().decode(JoinUser.self, from: Data(strData.utf8))
-                    completion(true , obj)
-                } catch {
-                    print(error.localizedDescription)
-                }
+        
+        api.requestAPI(completion:{(result) in
+            switch result {
+                case .success(let strData):
+                    print(strData)
+                    do
+                    {
+                        let obj = try JSONDecoder().decode(JoinUser.self, from: Data(strData.utf8))
+                        return completion(.success(obj))
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+
+                case .failure(let error):
+                    return completion(.failure(error))
             }
-            
-            completion(false,nil)
-            
         })
+        
     }
     
 }
