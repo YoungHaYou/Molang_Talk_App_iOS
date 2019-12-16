@@ -83,9 +83,15 @@ class IntroViewController : UIViewController {
     //MARK: - 유져 정보 가져오기
     func loadUserInfo()
     {
-        let model = UsersModel.shared.requestUserInfo(completion: { _,_  in
+//        let model = UsersModel.shared.requestUserInfo(completion: { _,_  in
+//
+//        })
+        
+        
+        UsersModel.shared.requestUserInfo(completion: { _ in
             
         })
+        
     }
     
     

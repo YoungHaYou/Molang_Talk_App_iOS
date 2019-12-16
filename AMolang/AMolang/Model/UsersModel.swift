@@ -52,16 +52,12 @@ class UsersModel: NSObject {
                     return completion(.failure(error))
             }
         })
-        
-        
     }
-    
 }
 
 //MARK: ------------------- **UserInfo모델---
 struct UserInfo: Codable
 {
-    
     var id: NSInteger
     var nickName:String
     var gender:String
